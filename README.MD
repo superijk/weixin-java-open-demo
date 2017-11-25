@@ -1,7 +1,7 @@
 ### 本Demo基于Spring Boot构建，实现微信三方平台开发功能。
 ### 本项目为weixin-java-tools的Demo演示程序，更多Demo请查阅：https://github.com/Wechat-Group/weixin-java-tools
 
-[![Build Status](https://travis-ci.org/007gzs/weixin-java-open-demo.svg?branch=master)](https://travis-ci.org/007gzs/weixin-java-open-demo)
+[![Build Status](https://travis-ci.org/Wechat-Group/weixin-java-open-demo.svg?branch=master)](https://travis-ci.org/Wechat-Group/weixin-java-open-demo)
 -----------------------
 
 ## 使用步骤：
