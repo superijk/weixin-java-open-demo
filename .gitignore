@@ -1,3 +1,5 @@
+#mac
+.DS_Store
 # https://github.com/github/gitignore/blob/master/Java.gitignore
 
 *.class
