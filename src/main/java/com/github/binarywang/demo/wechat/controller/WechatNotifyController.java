@@ -96,6 +96,11 @@ public class WechatNotifyController {
             } catch (WxErrorException e) {
                 logger.error("callback", e);
             }
+        }else{
+            WxMpXmlOutMessage outMessage = wxOpenService.getWxOpenMessageRouter().route(inMessage, appId);
+            if(outMessage != null){
+                out = WxOpenXmlMessage.wxMpOutXmlMessageToEncryptedXml(outMessage, wxOpenService.getWxOpenConfigStorage());
+            }
         }
         return out;
     }
