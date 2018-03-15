@@ -39,16 +39,15 @@ public class WechatNotifyController {
         // aes加密的消息
         WxOpenXmlMessage inMessage = WxOpenXmlMessage.fromEncryptedXml(requestBody, wxOpenService.getWxOpenConfigStorage(), timestamp, nonce, msgSignature);
         this.logger.debug("\n消息解密后内容为：\n{} ", inMessage.toString());
-        String out = "";
         try {
-            out = wxOpenService.getWxOpenComponentService().route(inMessage);
+            wxOpenService.getWxOpenComponentService().route(inMessage);
         } catch (WxErrorException e) {
             this.logger.error("receive_ticket", e);
         }
 
         this.logger.debug("\n组装回复信息：{}", out);
 
-        return out;
+        return "success";
     }
 
     @RequestMapping("{appId}/callback")
